@@ -16,7 +16,7 @@ void MainGame::Initialize()
 	{
 		CLEAN;
 		cout << "직업을 선택해주세요 ( 1.전사 2. 마법사 3. 도적 ) : ";
-		iSelect = Common::Get_Int();
+		iSelect = Common::Get_Int() - 1;
 		if (0 <= iSelect && Player::END > iSelect)
 		{
 			m_pPlayer->Initialize(iSelect);

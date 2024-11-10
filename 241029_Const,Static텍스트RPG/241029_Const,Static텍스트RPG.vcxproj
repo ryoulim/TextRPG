@@ -138,10 +138,13 @@
     <ClCompile Include="241029_Const,Static텍스트RPG.cpp" />
     <ClCompile Include="Bag.cpp" />
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Equip_Item.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Other_Item.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -149,17 +152,36 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Skill.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Store1.cpp" />
+    <ClCompile Include="Store2.cpp" />
+    <ClCompile Include="Store3.cpp" />
+    <ClCompile Include="StoreBase.cpp" />
+    <ClCompile Include="Useable_Item.cpp" />
     <ClCompile Include="Village.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bag.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Equip_Item.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Monster.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Other_Item.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Skill.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Store1.h" />
+    <ClInclude Include="Store2.h" />
+    <ClInclude Include="Store3.h" />
+    <ClInclude Include="StoreBase.h" />
+    <ClInclude Include="Useable_Item.h" />
     <ClInclude Include="Village.h" />
     <ClInclude Include="Define.h" />
   </ItemGroup>

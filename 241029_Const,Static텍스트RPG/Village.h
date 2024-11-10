@@ -1,5 +1,5 @@
 #pragma once
-#include "Player.h"
+#include "Object.h"
 
 class Village
 {
@@ -7,14 +7,11 @@ public:
 	Village() : m_pPlayer(nullptr) {}
 	~Village();
 
-	void Initialize(Player* _pPlayer);
+	void Initialize(Object* _pPlayer);
 	bool Update();
 	void Release();
 
 private:
-	void Store();
-	void Store_Buy();
-	void Store_Sell();
-	Player* m_pPlayer;
+	Object* m_pPlayer;
 };
 

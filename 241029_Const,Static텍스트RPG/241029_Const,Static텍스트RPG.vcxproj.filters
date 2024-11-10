@@ -22,12 +22,6 @@
     <Filter Include="Field">
       <UniqueIdentifier>{925f0b09-5106-4e45-90c0-52d8315f43b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Player">
-      <UniqueIdentifier>{bb8ff7a8-9b5f-42fd-8ada-d6e62e3df4e5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Monster">
-      <UniqueIdentifier>{617a990f-16d9-4fee-8a0b-dfdfe48a233b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Common">
       <UniqueIdentifier>{88e6588e-b9b0-46e5-a404-5d01ab40d2c7}</UniqueIdentifier>
     </Filter>
@@ -36,6 +30,48 @@
     </Filter>
     <Filter Include="Item">
       <UniqueIdentifier>{ed7bcaab-6dfe-4c4a-8419-ea9a42948251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill">
+      <UniqueIdentifier>{c9b0463d-73fb-4ee2-b279-9013a3723f62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{363a5f64-d02a-4f9d-9fef-e2ae3c71b187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Base">
+      <UniqueIdentifier>{8bbf0bfd-5d27-4432-bf22-63baef1be097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{bb8ff7a8-9b5f-42fd-8ada-d6e62e3df4e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster">
+      <UniqueIdentifier>{617a990f-16d9-4fee-8a0b-dfdfe48a233b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Store">
+      <UniqueIdentifier>{de5083fc-8225-4e2c-8378-40c9243a9484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Store\Base">
+      <UniqueIdentifier>{f3f2cfb6-5861-4c9c-88c2-67bdf97db2c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Store\Store1">
+      <UniqueIdentifier>{8f57dd94-efe5-4792-b8fe-d4d6a25b9bb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Store\Store2">
+      <UniqueIdentifier>{bab16e86-311c-4e96-952e-4888163509f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Store\Store3">
+      <UniqueIdentifier>{2f879167-b1ba-4396-92d9-5ac41c26bc26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Base">
+      <UniqueIdentifier>{826ab261-3e2f-4af8-ab4a-dd63fc6acc14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Equip_Item">
+      <UniqueIdentifier>{e1f51722-6e46-42f3-bfd2-89ba49fc220e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Useable_Item">
+      <UniqueIdentifier>{804221fe-05e3-4979-b4e7-857b8634974c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Other_Item">
+      <UniqueIdentifier>{285905b4-eb8d-46fa-940f-1a8bca454ddb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -49,7 +85,7 @@
       <Filter>MainGame</Filter>
     </ClCompile>
     <ClCompile Include="Monster.cpp">
-      <Filter>Monster</Filter>
+      <Filter>Object\Monster</Filter>
     </ClCompile>
     <ClCompile Include="Village.cpp">
       <Filter>Village</Filter>
@@ -58,7 +94,7 @@
       <Filter>Field</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Player</Filter>
+      <Filter>Object\Player</Filter>
     </ClCompile>
     <ClCompile Include="Common.cpp">
       <Filter>Common</Filter>
@@ -66,8 +102,35 @@
     <ClCompile Include="Bag.cpp">
       <Filter>Bag</Filter>
     </ClCompile>
+    <ClCompile Include="Skill.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreBase.cpp">
+      <Filter>Store\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Store1.cpp">
+      <Filter>Store\Store1</Filter>
+    </ClCompile>
+    <ClCompile Include="Store2.cpp">
+      <Filter>Store\Store2</Filter>
+    </ClCompile>
+    <ClCompile Include="Store3.cpp">
+      <Filter>Store\Store3</Filter>
+    </ClCompile>
+    <ClCompile Include="Equip_Item.cpp">
+      <Filter>Item\Equip_Item</Filter>
+    </ClCompile>
     <ClCompile Include="Item.cpp">
-      <Filter>Item</Filter>
+      <Filter>Item\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Useable_Item.cpp">
+      <Filter>Item\Useable_Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Other_Item.cpp">
+      <Filter>Item\Other_Item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,7 +141,7 @@
       <Filter>MainGame</Filter>
     </ClInclude>
     <ClInclude Include="Monster.h">
-      <Filter>Monster</Filter>
+      <Filter>Object\Monster</Filter>
     </ClInclude>
     <ClInclude Include="Village.h">
       <Filter>Village</Filter>
@@ -87,7 +150,7 @@
       <Filter>Field</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Player</Filter>
+      <Filter>Object\Player</Filter>
     </ClInclude>
     <ClInclude Include="Define.h">
       <Filter>헤더 파일</Filter>
@@ -98,8 +161,35 @@
     <ClInclude Include="Bag.h">
       <Filter>Bag</Filter>
     </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreBase.h">
+      <Filter>Store\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Store1.h">
+      <Filter>Store\Store1</Filter>
+    </ClInclude>
+    <ClInclude Include="Store2.h">
+      <Filter>Store\Store2</Filter>
+    </ClInclude>
+    <ClInclude Include="Store3.h">
+      <Filter>Store\Store3</Filter>
+    </ClInclude>
+    <ClInclude Include="Equip_Item.h">
+      <Filter>Item\Equip_Item</Filter>
+    </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>Item</Filter>
+      <Filter>Item\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Useable_Item.h">
+      <Filter>Item\Useable_Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Other_Item.h">
+      <Filter>Item\Other_Item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

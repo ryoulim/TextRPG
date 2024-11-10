@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MainGame">
+      <UniqueIdentifier>{16adce44-273b-413c-9719-fee3471af899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{e68b7428-b281-4090-88e7-c58f42b02c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Base">
+      <UniqueIdentifier>{c5e46d4a-287a-4834-bf96-3f077b848e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{182a378b-e754-4daa-be95-4cbfd5960c03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Village">
+      <UniqueIdentifier>{72606a19-b72f-4f77-aaa2-f3a951a05d59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon">
+      <UniqueIdentifier>{a43e49e2-b9cf-4a38-8dcb-6e14e0593e72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster">
+      <UniqueIdentifier>{be542fa6-520e-4a29-85d0-e054c29d9b88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory">
+      <UniqueIdentifier>{0da19009-6082-4384-98b0-c618b3f56742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item">
+      <UniqueIdentifier>{1a2a5a2e-9c3e-42fd-a6cb-5a2c7111b8b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Base">
+      <UniqueIdentifier>{df0622ee-4fe6-4d65-a13a-d5798cc0159c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Useable">
+      <UniqueIdentifier>{a9cda425-869d-440e-b6f7-ceaa6c64dafd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Equip">
+      <UniqueIdentifier>{81448679-b891-4f8a-bffa-38ac69d0e7f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Other">
+      <UniqueIdentifier>{46e523ea-7156-4b39-a9cc-c5e59c18c592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Useable\Attack_Item">
+      <UniqueIdentifier>{09d344df-18cd-4560-8e49-497ad1a28a98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Useable\Base">
+      <UniqueIdentifier>{33881e66-1acb-40e1-8ee0-16b360a5800d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Useable\Buff_Item">
+      <UniqueIdentifier>{e8ae436d-48cf-4004-96ad-75886995b072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Useable\Potion_Item">
+      <UniqueIdentifier>{f629dfc0-8e5c-4cd5-b641-9af4cf44f566}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster\Base">
+      <UniqueIdentifier>{3a97be81-3145-4bf1-a60a-f957c71ecb8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster\Slime">
+      <UniqueIdentifier>{b1f82e41-5a28-4190-bd45-91f21e0b34e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster\PIxie">
+      <UniqueIdentifier>{d0421f72-9352-4719-8ab6-b5433c0de869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster\Demon">
+      <UniqueIdentifier>{ade60025-078f-4db0-a060-ae44113160cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Store">
+      <UniqueIdentifier>{48d5b668-2ee1-436c-a07d-8c4581cf1df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill">
+      <UniqueIdentifier>{dc77c0df-189d-4263-b579-0f76adf61f78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\Base">
+      <UniqueIdentifier>{c6eadc2b-4686-4c55-94e7-0937263062f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\HIt_Skill">
+      <UniqueIdentifier>{6e236290-b3d9-4016-8559-793027272ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\Cure_Skill">
+      <UniqueIdentifier>{4647f806-35ba-40cd-8e86-7ec96fc1b10d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TextRpg_1107.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Village.cpp">
+      <Filter>Village</Filter>
+    </ClCompile>
+    <ClCompile Include="Dungeon.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Item\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Equip_Item.cpp">
+      <Filter>Item\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="Other_Item.cpp">
+      <Filter>Item\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Useable_Item.cpp">
+      <Filter>Item\Useable\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Attack_Item.cpp">
+      <Filter>Item\Useable\Attack_Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Buff_Item.cpp">
+      <Filter>Item\Useable\Buff_Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Potion_Item.cpp">
+      <Filter>Item\Useable\Potion_Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Object\Monster\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Demon.cpp">
+      <Filter>Object\Monster\Demon</Filter>
+    </ClCompile>
+    <ClCompile Include="Pixie.cpp">
+      <Filter>Object\Monster\PIxie</Filter>
+    </ClCompile>
+    <ClCompile Include="Slime.cpp">
+      <Filter>Object\Monster\Slime</Filter>
+    </ClCompile>
+    <ClCompile Include="Store.cpp">
+      <Filter>Store</Filter>
+    </ClCompile>
+    <ClCompile Include="Skill.cpp">
+      <Filter>Skill\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Hit_Skill.cpp">
+      <Filter>Skill\HIt_Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Cure_Skill.cpp">
+      <Filter>Skill\Cure_Skill</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Village.h">
+      <Filter>Village</Filter>
+    </ClInclude>
+    <ClInclude Include="Dungeon.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Item\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Equip_Item.h">
+      <Filter>Item\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="Other_Item.h">
+      <Filter>Item\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Useable_Item.h">
+      <Filter>Item\Useable\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack_Item.h">
+      <Filter>Item\Useable\Attack_Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Buff_Item.h">
+      <Filter>Item\Useable\Buff_Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Potion_Item.h">
+      <Filter>Item\Useable\Potion_Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Object\Monster\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Demon.h">
+      <Filter>Object\Monster\Demon</Filter>
+    </ClInclude>
+    <ClInclude Include="Pixie.h">
+      <Filter>Object\Monster\PIxie</Filter>
+    </ClInclude>
+    <ClInclude Include="Slime.h">
+      <Filter>Object\Monster\Slime</Filter>
+    </ClInclude>
+    <ClInclude Include="Store.h">
+      <Filter>Store</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Skill\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Hit_Skill.h">
+      <Filter>Skill\HIt_Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Cure_Skill.h">
+      <Filter>Skill\Cure_Skill</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

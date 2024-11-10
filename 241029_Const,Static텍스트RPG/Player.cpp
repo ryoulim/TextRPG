@@ -1,11 +1,7 @@
 #include "pch.h"
 #include "Player.h"
-
-Player::Player()
-{
-	m_pStatus = nullptr;
-	m_pBag = nullptr;
-}
+#include "Common.h"
+#include "Skill.h"
 
 Player::~Player()
 {
@@ -15,33 +11,42 @@ Player::~Player()
 void Player::Initialize(const int _iClassNum)
 {
 	m_pStatus = new Status;
-	switch (_iClassNum-1)
+	switch (_iClassNum)
 	{
 	case WARRIOR:
 		memcpy_s(m_pStatus->szName, sizeof(m_pStatus->szName), &"전사", sizeof("전사"));
 		m_pStatus->iMaxHp = 100;
 		m_pStatus->iHp = 100;
+		m_pStatus->iMaxMp = 100;
+		m_pStatus->iMp = 100;
 		m_pStatus->iAtk = 10;
 		m_pStatus->iLv = 1;
 		m_pStatus->iExp = 0;
+		m_pStatus->iType = Skill::NORMAL;
 		m_pStatus->iSpeed = 10;
 		break;
 	case MAGE:
 		memcpy_s(m_pStatus->szName, sizeof(m_pStatus->szName), &"마법사", sizeof("마법사"));
 		m_pStatus->iMaxHp = 100;
 		m_pStatus->iHp = 100;
+		m_pStatus->iMaxMp = 100;
+		m_pStatus->iMp = 100;
 		m_pStatus->iAtk = 10;
 		m_pStatus->iLv = 1;
 		m_pStatus->iExp = 0;
+		m_pStatus->iType = Skill::NORMAL;
 		m_pStatus->iSpeed = 10;
 		break;
 	case THIEF:
 		memcpy_s(m_pStatus->szName, sizeof(m_pStatus->szName), &"도적", sizeof("도적"));
 		m_pStatus->iMaxHp = 100;
 		m_pStatus->iHp = 100;
+		m_pStatus->iMaxMp = 100;
+		m_pStatus->iMp = 100;
 		m_pStatus->iAtk = 10;
 		m_pStatus->iLv = 1;
 		m_pStatus->iExp = 0;
+		m_pStatus->iType = Skill::NORMAL;
 		m_pStatus->iSpeed = 10;
 		break;
 	default:
@@ -49,10 +54,15 @@ void Player::Initialize(const int _iClassNum)
 		return;
 	}
 
-	m_pBag = new Bag;
+	m_pBag_Equip = new Bag;
+	m_pBag_Equip->Initialize(Bag::EQUIP);
+	m_pBag_Useable = new Bag;
+	m_pBag_Equip->Initialize(Bag::USEABLE);
+	m_pBag_Other = new Bag;
+	m_pBag_Equip->Initialize(Bag::OTHER);
 }
 
-void Player::Info_Render()
+void Player::Info_Render() const
 {
 	cout << "========================================" << endl;
 	cout << "이름 : " << m_pStatus->szName << '\t' << "레벨 : " << m_pStatus->iLv << endl;
@@ -60,43 +70,11 @@ void Player::Info_Render()
 	cout << "경험치 : " << m_pStatus->iExp << " / 100" << endl;
 }
 
-bool Player::Damaged(int _iDamage)
+void Player::Exp_Cal(int _iTmp)
 {
-	bool bKillCheck(false);
-	m_pStatus->iHp -= _iDamage;
-	if (0 >= m_pStatus->iHp)
-	{
-		_iDamage -= m_pStatus->iHp;
-		bKillCheck = true;
-	}
-	cout << m_pStatus->szName << "은(는)" << _iDamage << "의 피해를 입었다." << endl;
-	DELAY;
-	if (bKillCheck)
-	{
-		cout << m_pStatus->szName << "은(는) 쓰러졌다." << endl;
-		DELAY;
-	}
-	return bKillCheck;
-}
-
-
-void Player::Exp_Minus(int _iMinus)
-{
-	m_pStatus->iExp -= _iMinus;
+	m_pStatus->iExp += _iTmp;
 	if (0 > m_pStatus->iExp)
 		m_pStatus->iExp = 0;
-}
-
-void Player::Heal(int _iForce)
-{
-	m_pStatus->iHp += _iForce;
-	if (m_pStatus->iHp >= m_pStatus->iMaxHp)
-	{
-		_iForce -= m_pStatus->iHp - m_pStatus->iMaxHp;
-		m_pStatus->iHp = m_pStatus->iMaxHp;
-
-	}
-	cout << m_pStatus->szName << "의 체력이 " << _iForce << "회복되었다." << endl;
 }
 
 void Player::LvUp()
@@ -114,6 +92,7 @@ void Player::LvUp()
 
 void Player::Release()
 {
-	SAFE_DELETE(m_pStatus);
-	SAFE_DELETE(m_pBag)
+	SAFE_DELETE(m_pBag_Equip);
+	SAFE_DELETE(m_pBag_Useable);
+	SAFE_DELETE(m_pBag_Other);
 }

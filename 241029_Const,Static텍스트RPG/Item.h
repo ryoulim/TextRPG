@@ -1,22 +1,15 @@
 #pragma once
 #include "Define.h"
 
+class Object;
+
 class Item
 {
 public:
-	Item() : m_pItemInfo(nullptr) {}
-	~Item() { Release(); }
 
-	void Initalize(const int _iNum, const int _iCount);
-	bool Count_Cal(const int _iCount); // 0이되면 bag에서 이 아이템의 배열을 삭제하기 위해 true 반환
-	int Get_Num() { return m_pItemInfo->iNumber; }
-	void Release();
-
-	static const char* Name_Render(const int _iItemNum);
-	ItemInfo* Get_ItemInfo() { return m_pItemInfo; }
-	void Copy(Item* _pItem);
-
-	enum ITEMNAME { ITEM1 = 1, ITEM2, ITEM3, POTION1, POTION2, End };
-private:
-	ItemInfo* m_pItemInfo;
+	virtual const char* Get_Name(const int _iItemNum) const = 0;
+	virtual const char* Get_Info(const int _iItemNum) const = 0;
+	virtual int Get_Cost(const int _iItemNum) const = 0;
+	virtual bool Use_Item(Object* _pObject) const = 0; // 만약 소모아이템의 기능이 더 추가된다면? 이클래스에 하위 함수를 만들고 이 함수에서는 각각 함수로 연결해주는 역할
+	// static, const 동시사용 불가, 스태틱에서 어짜피 멤버변수(함수)에 접근을 못하니까 붙이는게 의미 없는듯?
 };
