@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{783906f3-9569-4012-a293-6ce4b403388f}</ProjectGuid>
-    <RootNamespace>TextRpg1107</RootNamespace>
+    <ProjectGuid>{15b04732-92b3-4409-9db2-aed0e27d5983}</ProjectGuid>
+    <RootNamespace>TextRpg1113vector</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -135,64 +135,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Attack_Item.cpp" />
     <ClCompile Include="Battle.cpp" />
-    <ClCompile Include="Buff_Item.cpp" />
-    <ClCompile Include="Cure_Skill.cpp" />
-    <ClCompile Include="Demon.cpp" />
-    <ClCompile Include="Dungeon.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Dungeon.cpp" />
     <ClCompile Include="Equip_Item.cpp" />
-    <ClCompile Include="Hit_Skill.cpp" />
     <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Other_Item.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Pixie.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Potion_Item.cpp" />
-    <ClCompile Include="Skill.cpp" />
-    <ClCompile Include="Slime.cpp" />
     <ClCompile Include="Store.cpp" />
-    <ClCompile Include="TextRpg_1107.cpp" />
-    <ClCompile Include="Useable_Item.cpp" />
+    <ClCompile Include="TextRpg_1113(vector).cpp" />
     <ClCompile Include="Village.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Attack_Item.h" />
     <ClInclude Include="Battle.h" />
-    <ClInclude Include="Buff_Item.h" />
-    <ClInclude Include="Cure_Skill.h" />
-    <ClInclude Include="Demon.h" />
-    <ClInclude Include="Dungeon.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="Dungeon.h" />
     <ClInclude Include="Equip_Item.h" />
-    <ClInclude Include="Hit_Skill.h" />
     <ClInclude Include="Inventory.h" />
-    <ClInclude Include="Item.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Object.h" />
-    <ClInclude Include="Other_Item.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Define.h" />
-    <ClInclude Include="Pixie.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="Potion_Item.h" />
-    <ClInclude Include="Skill.h" />
-    <ClInclude Include="Slime.h" />
     <ClInclude Include="Store.h" />
-    <ClInclude Include="Useable_Item.h" />
     <ClInclude Include="Village.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

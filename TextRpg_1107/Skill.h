@@ -15,7 +15,6 @@ class Skill
 {
 public:
 	~Skill() { Release(); }
-	//static Skill* Create_Skill();
 
 	virtual bool Use_Skill(Object* _pCaster, Object* _pTarget = nullptr) = 0;
 	enum EFFECT_TYPE {NONE, BURN, FRIZE, PARALYZE, INSTANT_DEATH, CURE};
@@ -27,6 +26,11 @@ public:
 		DIA, AMRITADROP,
 		TARUKAJA, RAKUKAJA, SUKUKAJA
 	};
+
+	static Skill* Create_Skill(SKILL_LIST _SkillList);
+
+	const char* Get_Name() { return m_szName; }
+	const char* Get_Info() { return m_szInfo; }
 
 protected:
 //	Info m_Info;

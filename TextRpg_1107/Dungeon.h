@@ -13,6 +13,12 @@ public:
 private:
 	Object* m_pPlayer;
 	int m_iFloor;
+
 	void Enter() const;
+	void Item_Drop();
+	void Next_Floor();
+	void Text_Render();
+
+	void New_Skill();
 };
 

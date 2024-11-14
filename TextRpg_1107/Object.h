@@ -13,7 +13,7 @@ typedef struct tagStatus
 	int iLv, iExp;
 	int iMaxHp, iHp;
 	int iMaxMp, iMp;
-	int iAtk, iM_Atk, iDef, iSpeed;
+	int iAtk, iM_Atk, iDef, iSpeed, iLuk;
 	int iEffect;
 	int* pType;
 	int iBuff[MAX_STATUS];
@@ -31,18 +31,24 @@ public:
 	enum TYPE { NORMAL, FIRE, ICE, THUNDER, WIND, LIGHT, DARKNESS, HEAL};
 
 	Status* Get_Status() { return &m_Status; }
+	Skill* Get_Skill(const int _iIndex) { return m_pSkill[_iIndex]; }
+	virtual void Set_Skill(Skill* _pSKill, const int _iIndex) { m_pSkill[_iIndex] = _pSKill;  }
 	bool Damaged(const int _iDamage);
 	void Heal(int _iForce, const bool _bMode);
 	void Set_iBuff(const int _iIndex, const int _iValue) { m_Status.iBuff[_iIndex] = _iValue; }
 	void Set_iEffect(const int _iType) { m_Status.iEffect = _iType * 10 + 3; }
+	void Set_Gaurd(const bool _bGuard) { m_bGaurd = _bGuard;  }
+
+	virtual void LvUp() = 0;
 
 protected:
 	Status m_Status;
-	Skill* m_pSkill;
+	Skill* m_pSkill[MAX_SKILL_ABLE+1];
+	bool m_bGaurd;
 
 	void Release();
 
-	Object(char _szName[], int _iHp, int _iMp, int _iAtk, int _iM_Atk, int _iDef, int _iSpeed, const char* _pClass, int* _pType) : m_pSkill(nullptr)
+	Object(char _szName[], int _iHp, int _iMp, int _iAtk, int _iM_Atk, int _iDef, int _iSpeed, const char* _pClass, int* _pType) : m_pSkill(), m_bGaurd(false)
 	{
 		strcpy_s(m_Status.szName, sizeof(m_Status.szName), _szName);
 		strcpy_s(m_Status.szClass, sizeof(m_Status.szClass), _pClass);
@@ -57,6 +63,7 @@ protected:
 		m_Status.iSpeed = _iSpeed;
 		m_Status.pType = _pType;
 		m_Status.iEffect = 0;
+		m_Status.iLuk = 10;
 	}
 
 	const char* Type_Render();

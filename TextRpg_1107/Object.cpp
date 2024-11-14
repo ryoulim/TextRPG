@@ -36,5 +36,6 @@ void Object::Heal(int _iForce, const bool _bMode)
 void Object::Release()
 {
 	SAFE_DELETE_ARRAY(m_Status.pType);
-	SAFE_DELETE_ARRAY(m_pSkill);
+	for(int i = 0; i < MAX_SKILL_ABLE + 1; ++i)
+		SAFE_DELETE(m_pSkill[i]);
 }

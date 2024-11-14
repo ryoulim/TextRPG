@@ -6,57 +6,6 @@
 
 //Hit_Skill(const char* _szName, const char* _szInfo, int _iForce, int _iType, bool* _bStatusBuff, EFFECT_TYPE _Effect_type) :
 
-Skill* Hit_Skill::Create_Skill(const int _iSkillNum)
-{
-	Skill* pSkill = nullptr;
-	bool* pStatusBuff = new bool[MAX_STATUS];
-	memset(pStatusBuff, false, sizeof(bool) * MAX_STATUS);
-	
-	switch (_iSkillNum)
-	{
-	case ATTACK : 
-		pSkill = new Hit_Skill("공격", "100%의 무 속성 물리데미지, 마나 0 소모", 100, 0 , Object::NORMAL, pStatusBuff, NONE, false);
-		break;
-	case SLASH:
-		pSkill = new Hit_Skill("슬래쉬", "150%의 무 속성 물리데미지, 마나 3 소모", 150, 3, Object::NORMAL, pStatusBuff, NONE, false);
-		break;
-	case AGI:
-		pSkill = new Hit_Skill("아기", "150%의 화염 속성 마법데미지, 마나 3 소모, 10%확률로 화상 부여", 150, 3, Object::FIRE, pStatusBuff, BURN, true);
-		break;
-	case BUFU:
-		pSkill = new Hit_Skill("부흐", "150%의 얼음 속성 마법데미지, 마나 4 소모, 10%확률로 빙결 부여", 150, 4, Object::ICE, pStatusBuff, FRIZE, true);
-		break;
-	case ZIO:
-		pSkill = new Hit_Skill("지오", "150%의 전격 속성 마법데미지, 마나 4 소모, 10%확률로 마비 부여", 150, 4, Object::THUNDER, pStatusBuff, PARALYZE, true);
-		break;
-	case GARU:
-		pSkill = new Hit_Skill("갈", "150%의 질풍 속성 마법데미지, 마나 3 소모", 150, 3, Object::WIND, pStatusBuff, NONE, true);
-		break;
-	case KOUHA:
-		pSkill = new Hit_Skill("코우하", "170%의 빛 속성 마법데미지, 마나 4 소모", 170, 4, Object::LIGHT, pStatusBuff, NONE, true);
-		break;
-	case EIHA:
-		pSkill = new Hit_Skill("에이하", "150%의 어둠 속성 마법데미지, 마나 4 소모, 10%확률로 즉사 부여", 150, 4, Object::DARKNESS, pStatusBuff, INSTANT_DEATH, true);
-		break;
-	case TARUNDA:
-		pStatusBuff[Object::ATK] = true;
-		pSkill = new Hit_Skill("타룬다", "3턴간 적의 공격력 감소, 마나 6 소모", 0, 6, Object::NORMAL, pStatusBuff, NONE, false);
-		break;
-	case RAKUNDA:
-		pStatusBuff[Object::DEF] = true;
-		pSkill = new Hit_Skill("라쿤다", "3턴간 적의 방어력 감소, 마나 6 소모", 0, 6, Object::NORMAL, pStatusBuff, NONE, false);
-		break;
-	case SUKUNDA:
-		pStatusBuff[Object::LUK] = true;
-		pStatusBuff[Object::SPD] = true;
-		pSkill = new Hit_Skill("스쿤다", "3턴간 적의 운,스피드 감소, 마나 7 소모", 0, 7, Object::NORMAL, pStatusBuff, NONE, false);
-		break;
-	default:
-		break;
-	}
-	return pSkill;
-}
-
 bool Hit_Skill::Use_Skill(Object* _pCaster, Object* _pTarget)
 {
 	int iDamage(0), iType(0);

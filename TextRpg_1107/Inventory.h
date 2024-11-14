@@ -1,5 +1,6 @@
 #pragma once
 #include "Item.h"
+#include <vector>
 
 typedef struct tagElement
 {
@@ -24,6 +25,8 @@ public:
 	int Get_Length() { return m_iListLength; }
 	static int m_iPlayerGold;
 private:
+	//vector<Item> 
+
 	int	m_iListLength;
 	Element m_HeadNode;
 

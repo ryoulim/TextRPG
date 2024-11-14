@@ -1,6 +1,6 @@
 #pragma once
 
-class Objecct;
+class Object;
 
 class Item
 {
@@ -9,9 +9,26 @@ public:
 
 	bool operator ==(Item& rhs) { return !strcmp(m_szName, rhs.m_szName); }
 
-	enum ITEM_TYPE { EQUIP, USEABLE, OTHER };
+	static Item* Create_Item(const int _iItemNum);
 
-	virtual void Use_Item(Objecct* _pPlayer) = 0;
+	enum ITEM_TYPE { EQUIP, USEABLE, OTHER };
+	enum EQUIP_ITEM_LIST
+	{
+		SWORD1, SWORD2,
+		STAFF1, STAFF2,
+		DAGGER1, DAGGER2,
+		HAT1, HAT2, HAT3,
+		CLOTHES1, CLOTHES2, CLOTHES3,
+		SHOES1, SHOES2, SHOES3
+	};
+	enum OTHER_ITEM_LIST { SLIMEITEM = SHOES3+1, PIXIEITEM, DEMONITEM };
+	enum BUFF_ITEM_LIST { ATKUP = DEMONITEM+1, DEFUP };
+	enum POTION_LIST { POTION1 = DEFUP+1, POTION2 };
+	enum ATTACK_ITEM_LIST { BOMB = POTION2+1};
+
+
+
+	virtual void Use_Item(Object* _pPlayer) = 0;
 	virtual Item* Copy() = 0;
 
 	const char* Get_Name() { return m_szName; }

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MainGame">
+      <UniqueIdentifier>{784d82aa-94b7-4940-b88d-a19b1c60aae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Village">
+      <UniqueIdentifier>{87159051-e54c-400d-aa21-6b9717ba75e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon">
+      <UniqueIdentifier>{9c26de37-7129-4237-b04f-92f49b8a5c80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{e9c22a35-704d-4ee3-a462-b8e394bffef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{12482f58-3dcf-48d1-918a-1c518f9eca94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster">
+      <UniqueIdentifier>{bf316e9f-c69d-4c2d-a630-862e32c0bb71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Base">
+      <UniqueIdentifier>{40928e11-fad4-47c6-b05b-e06f0114da3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Equip_Item">
+      <UniqueIdentifier>{d8627db2-80c6-432d-b5ef-450c98772713}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory">
+      <UniqueIdentifier>{0efc74fc-278f-452b-810c-3ce80eb27100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Store">
+      <UniqueIdentifier>{a90d2206-89eb-44e0-a349-432ca43d984d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Battle">
+      <UniqueIdentifier>{70e54f54-3904-407d-970d-89c5a763ddd7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TextRpg_1113(vector).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Equip_Item.cpp">
+      <Filter>Equip_Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Village.cpp">
+      <Filter>Village</Filter>
+    </ClCompile>
+    <ClCompile Include="Dungeon.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="Store.cpp">
+      <Filter>Store</Filter>
+    </ClCompile>
+    <ClCompile Include="Battle.cpp">
+      <Filter>Battle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Equip_Item.h">
+      <Filter>Equip_Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Village.h">
+      <Filter>Village</Filter>
+    </ClInclude>
+    <ClInclude Include="Dungeon.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="Store.h">
+      <Filter>Store</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle.h">
+      <Filter>Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

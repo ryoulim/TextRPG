@@ -11,11 +11,17 @@ public:
 	void Info_Render() const override;
 	void Info_Render_Detail() const override;
 
+	int Skill_Select();
+	int Item_Select();
+
+	void Exp_Update(const int _Exp);
+
+	virtual void LvUp() override;
+
 	Inventory* Get_Inven(Item::ITEM_TYPE _Type) { return &m_Inven[_Type]; }
 
 	enum CLASS_LIST { WARRIOR = 1, MAGE, THIEF, END };
 private:
-
 	bool bEquip[MAX_STATUS]; // true - ТјПыСп, false - ЙЬТјПы
 	Inventory m_Inven[3];
 

@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Player.h"
 #include "Define.h"
+#include "Skill.h"
 
 #define PTYPE(_NORMAL,_FIRE,_ICE,_THUNDER,_WIND,_LIGHT,_DARKNESS) \
 pType[NORMAL] = (_NORMAL);\
@@ -46,6 +47,8 @@ Object* Player::Create_Player(const int _iClassNum, char _szName[])
 		break;
 	}
 
+	pPlayer->Set_Skill(Skill::Create_Skill(Skill::ATTACK), 0);
+
 	return pPlayer;
 }
 
@@ -66,4 +69,87 @@ void Player::Info_Render_Detail() const
 	cout << "레벨 : " << m_Status.iLv << "\t\t" << "경험치 : " << m_Status.iExp << endl;
 	cout << "공격력 : " << m_Status.iAtk << " 마법공격력 : " << m_Status.iM_Atk << '\t' << "방어력 : " << m_Status.iDef << '\t' << "스피드 : " << m_Status.iSpeed << endl;
 	LINE_UI;
+}
+
+
+int Player::Skill_Select()
+{
+	cout << "사용할 스킬을 골라주세요" << endl;
+	int i(1);
+	for (; i <= MAX_SKILL_ABLE; ++i)
+	{
+		if (m_pSkill[i] == nullptr)
+			break;
+		cout << i << ". " << m_pSkill[i]->Get_Name() << " : " << m_pSkill[i]->Get_Info() << endl;
+	}
+	cout << "0. 돌아가기" << endl;
+	--i;
+
+	int iSelect(0);
+	while (true)
+	{
+		cin >> iSelect;
+		if (iSelect == 0)
+			return 0;
+		if (iSelect < 0 || iSelect > i)
+		{
+			cout << "잘못된 입력입니다." << endl;
+			continue;
+		}
+		else
+			break;
+	}
+	return iSelect;
+}
+
+int Player::Item_Select()
+{
+	cout << "사용할 아이템을 골라주세요" << endl;
+	int i(0);
+	for (; i < m_Inven[Item::USEABLE].Get_Length(); ++i)
+	{
+		cout << i+1 << ". " << m_Inven[Item::USEABLE].Get_Item(i)->Get_Name() << " : " << m_Inven[Item::USEABLE].Get_Item(i)->Get_Info() << endl;
+	}
+	cout << "0. 돌아가기" << endl;
+
+	int iSelect(0);
+	while (true)
+	{
+		cin >> iSelect;
+		if (iSelect == 0)
+			return 0;
+		if (iSelect < 0 || iSelect > i)
+		{
+			cout << "잘못된 입력입니다." << endl;
+			continue;
+		}
+		else
+			break;
+	}
+	return iSelect;
+}
+
+void Player::Exp_Update(const int _Exp)
+{
+	m_Status.iExp += _Exp;
+	if (m_Status.iExp < 0)
+		m_Status.iExp = 0;
+}
+
+void Player::LvUp()
+{
+	cout << "레벨 업!" << endl;
+	DELAY(100);
+	m_Status.iExp -= 100;
+	m_Status.iLv++;
+
+	m_Status.iMaxHp++;
+	m_Status.iHp = m_Status.iMaxHp;
+	m_Status.iMaxMp++;
+	m_Status.iMp = m_Status.iMaxMp;
+	m_Status.iAtk++;
+	m_Status.iM_Atk++;
+	m_Status.iDef++;
+	m_Status.iSpeed++;
+	cout << m_Status.szName << "의 능력치가 상승했다." << endl;
 }

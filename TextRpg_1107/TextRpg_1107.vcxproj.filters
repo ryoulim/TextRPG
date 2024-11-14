@@ -91,6 +91,9 @@
     <Filter Include="Skill\Cure_Skill">
       <UniqueIdentifier>{4647f806-35ba-40cd-8e86-7ec96fc1b10d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Dungeon\Battle">
+      <UniqueIdentifier>{b01aef2d-48be-4313-82ec-37498f81fcd8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TextRpg_1107.cpp">
@@ -162,6 +165,9 @@
     <ClCompile Include="Cure_Skill.cpp">
       <Filter>Skill\Cure_Skill</Filter>
     </ClCompile>
+    <ClCompile Include="Battle.cpp">
+      <Filter>Dungeon\Battle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -232,6 +238,9 @@
     </ClInclude>
     <ClInclude Include="Cure_Skill.h">
       <Filter>Skill\Cure_Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle.h">
+      <Filter>Dungeon\Battle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
